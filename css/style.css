@@ -330,9 +330,18 @@ footer {
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-  nav {
-    display: none;
+   nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
+  /* se quiser, diminua a margem entre os links também */
+  nav a {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+}
   .hero-frase {
     font-size: 1.3rem;
   }
