@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | LUANDESSON Personal Holistic</title>
+    <meta name="description" content="Artigos sobre saúde, bem-estar, corpo, mente, energia e tecnologia com Luandesson Personal Holistic." />
+    <meta name="keywords" content="blog, saúde holística, bem-estar, tecnologia, corpo, mente, energia, fitness, espiritualidade, Luandesson" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+</head>
+<body>
+    <header class="blog-header"> <a href="index.html" class="blog-logo-link"> <img src="img/logo.png" alt="LA Logo" class="logo-img" />
+        </a>
+        <h1 class="blog-title">
+            <a href="index.html">LUANDESSON | Personal Holistic</a>
+        </h1>
+        <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+    </header>
+
+    <main class="blog-main">
+        <section class="newsletter-tagline">
+  <h2>Newsletter da alma</h2>
+  <p class="tagline">Sua dose ritualística de insights, tecnologia e alquimia diária</p>
+</section>
+            <article class="blog-post-preview" data-aos="fade-up">
+                <img src="img/preview-despertar-blog.jpg" alt="Imagem do Artigo 1">
+                <div class="post-content">
+                    <h3>O Poder da Meditação na Redução do Estresse</h3>
+                    <p>Descubra como a prática da meditação pode transformar sua mente e corpo, trazendo mais calma e clareza para o seu dia a dia...</p>
+                    <a href="blog-posts/artigo1.html" class="btn-read-more">Ler Mais</a>
+                </div>
+            </article>
+
+            <article class="blog-post-preview" data-aos="fade-up">
+    <img src="img/preview-tech-wellness-blog.jpg" alt="Prévia do artigo 'Revolução do Bem-Estar Personalizado com Tecnologia e IA'">
+    <div class="post-content">
+        <h3>A Revolução do Bem-Estar Personalizado: A Vanguarda Holística com Tecnologia e IA</h3>
+        <p>Descubra como a integração de sabedoria ancestral e inovação tecnológica está redefinindo o bem-estar e o fitness de elite...</p>
+        <a href="blog-posts/artigo2.html" class="btn-read-more">Ler Mais</a>
+    </div>
+            </article>
+            </section>
+    </main>
+
+    <footer>
+        &copy; 2025 LUANDESSON | Personal Holistic. Todos os direitos reservados.
+        <p class="footer-msg">“Desperte seu código original.”</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script>
+        const toggleButton = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) root.setAttribute("data-theme", savedTheme);
+        const updateIcon = () => {
+            const theme = root.getAttribute("data-theme");
+            toggleButton.textContent = theme === "dark" ? "🌞" : "🌙";
+        };
+        updateIcon();
+        toggleButton.addEventListener("click", () => {
+            const current = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", current);
+            localStorage.setItem("theme", current);
+            updateIcon();
+        });
+    </script>
+</body>
+</html>
