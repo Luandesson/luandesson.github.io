@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burnout: Quando o Corpo Clama e a Alma Desperta | Blog LUANDESSON</title>
+  <meta name="description" content="Entenda o burnout além do cansaço físico: uma crise da alma que pede reconexão profunda. Descubra como reprogramar corpo, mente e espírito para sair do colapso." />
+  <meta name="keywords" content="Burnout, esgotamento emocional, terapia holística, corpo mente espírito, equilíbrio energético, autoconhecimento, Luandesson Personal Holistic" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <header class="article-header">
+    <a href="../blog.html" class="back-button">👈</a>
+    <h1 class="blog-title"><a href="../index.html">LUANDESSON | Personal Holistic</a></h1>
+    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+  </header>
+
+  <main class="article-main">
+    <section class="article-content" data-aos="fade-up">
+      <h2>Burnout: Quando o Corpo Clama e a Alma Desperta</h2>
+      <img src="../img/almapedidoresgate.jpg" alt="Pessoa com expressão cansada, misturando elementos urbanos e energéticos." class="article-hero-img">
+
+      <p>Burnout não é só cansaço. É um <strong>grito do corpo e da alma</strong> pedindo resgate. É o sistema interno queimado, exaurido, tentando dizer que o código da sua vida precisa ser reescrito.</p>
+
+      <h3>O que é burnout?</h3>
+      <p>Segundo a Organização Mundial da Saúde, burnout é a síndrome causada pelo <em>estresse crônico</em> no trabalho que não foi gerenciado. Ela se manifesta em três sinais claros:</p>
+      <ul>
+        <li><strong>Esgotamento emocional:</strong> você acorda cansado, sem energia para nada.</li>
+        <li><strong>Despersonalização:</strong> parece que virou um robô, desconectado de si e dos outros.</li>
+        <li><strong>Baixa realização pessoal:</strong> nada mais parece fazer sentido ou trazer orgulho.</li>
+      </ul>
+
+      <h3>O burnout como aviso do seu sistema</h3>
+      <p>Burnout é a voz da sua essência que cansou de ignorar os sinais. O corpo trava, a mente se perde e a alma implora por reconexão. Quando o externo domina demais, o interno se apaga.</p>
+
+      <img src="../img/homemlivros.jpg" alt="Ilustração de energia fluindo pelo corpo humano, simbolizando equilíbrio e cura." class="article-inner-img">
+
+      <h3>Sinais que o burnout está batendo à porta</h3>
+      <p>Fique atento quando:</p>
+      <ul>
+        <li>Você acorda com o peito pesado e a mente acelerada;</li>
+        <li>Qualquer tarefa parece uma montanha intransponível;</li>
+        <li>Você se irrita com facilidade e se afasta das pessoas;</li>
+        <li>Sente que perdeu o contato com seu propósito e essência.</li>
+      </ul>
+
+      <h3>O caminho para reprogramar seu sistema</h3>
+      <p>Não é só descansar, é reescrever o código da sua existência. Comece pela frequência:</p>
+      <ul>
+        <li><strong>Desligue</strong> dos ruídos externos e conecte-se com seu silêncio interno;</li>
+        <li><strong>Respire</strong> profundamente, ancore-se no momento presente;</li>
+        <li><strong>Movimente</strong> o corpo com intenção e consciência — yoga, caminhada, dança;</li>
+        <li><strong>Reavalie</strong> seus limites e prioridades: o que te nutre e o que te drena;</li>
+        <li><strong>Busque</strong> práticas integrativas que unam corpo, mente e espírito;</li>
+      </ul>
+
+      <h3>Burnout é convite para renascer</h3>
+      <p>Essa crise é o chamado para <strong>matar o personagem falso</strong> que você tentou ser e despertar para o seu Eu Autêntico — onde o corpo, o código e o espírito vibram em harmonia.</p>
+
+      <img src="../img/produtividadeemdia.jpg" alt="Silhueta de uma pessoa sob luz dourada, simbolizando renascimento e despertar espiritual." class="article-bottom-img">
+
+      <div class="compartilhar">
+        <span>Compartilhe este artigo:</span>
+        <a href="https://api.whatsapp.com/send?text=Confira%20este%20artigo%20sobre%20Burnout:%20https://luandesson.github.io/blog-posts/burnout.html" target="_blank" class="social-icon whatsapp" aria-label="Compartilhar no WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://luandesson.github.io/blog-posts/burnout.html" target="_blank" class="social-icon facebook" aria-label="Compartilhar no Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/luandesson_alves/" target="_blank" class="social-icon instagram" aria-label="Instagram do Luandesson">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 LUANDESSON | Personal Holistic. Todos os direitos reservados.
+    <p class="footer-msg">“Desperte seu código original.”</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) root.setAttribute("data-theme", savedTheme);
+    const updateIcon = () => {
+      const theme = root.getAttribute("data-theme");
+      toggleButton.textContent = theme === "dark" ? "🌞" : "🌙";
+    };
+    updateIcon();
+    toggleButton.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", current);
+      localStorage.setItem("theme", current);
+      updateIcon();
+    });
+  </script>
+</body>
+</html>

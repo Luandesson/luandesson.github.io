@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consciência Integrativa: Corpo, Código e Espírito | Blog LUANDESSON</title>
+  <meta name="description" content="Explore como corpo, mente e tecnologia se unem na jornada de cura com Luandesson Alves. Descubra o poder do autoconhecimento através da espiritualidade, códigos internos e integração com a tecnologia." />
+  <meta name="keywords" content="Consciência Integrativa, espiritualidade digital, alquimia consciencial, física quântica, bem-estar holístico, Personal Holistic, Luandesson Alves" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <header class="article-header">
+    <a href="../blog.html" class="back-button">👈</a>
+    <h1 class="blog-title"><a href="../index.html">LUANDESSON | Personal Holistic</a></h1>
+    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+  </header>
+
+  <main class="article-main">
+    <section class="article-content" data-aos="fade-up">
+      <h2>Consciência Integrativa: O Futuro é Corpo, Código e Espírito</h2>
+      <img src="../img/homemintegrado.jpg" alt="Imagem simbólica de corpo humano e códigos de luz se integrando com a natureza e dados digitais." class="article-hero-img">
+
+      <p>Vivemos em um tempo onde corpo, mente e alma estão despertando. Como terapeuta holístico e estudante de alquimia, física quântica e tecnologia, percebo: o que sentimos, pensamos e fazemos está interligado com o que *codificamos* dentro e fora de nós.</p>
+
+      <h3>O corpo é tecnologia viva</h3>
+      <p>O corpo manifesta energeticamente o que o inconsciente guarda. Cada dor ou bloqueio é um sinal do sistema. Yoga, respiração, meditação e alimentação consciente são chaves para harmonizar os nossos dados internos.</p>
+
+      <img src="../img/corpotecnologiaviva.jpg" alt="Visualização de um corpo humano com conexões de dados energéticos em um fundo cósmico." class="article-inner-img">
+
+      <h3>A mente como campo de possibilidades</h3>
+      <p>O que você acredita molda o que você vive. A Física Quântica e a Psicologia Junguiana mostram: você cria sua realidade com base na sua frequência.</p>
+
+      <h3>A tecnologia como extensão da alma</h3>
+      <p>Ao invés de fugir da tecnologia, precisamos espiritualizá-la. Ferramentas digitais, IA e códigos podem ser pontes para a cura, o autoconhecimento e a expansão da consciência.</p>
+
+      <img src="../img/tecespiritualizada.jpg" alt="Mãos humanas interagindo com interface holográfica de chakras e dados, simbolizando o encontro entre tecnologia e espírito." class="article-inner-img">
+
+      <h3>A espiritualidade como elo de reconexão</h3>
+      <p>Conectar-se com algo maior é voltar para casa. A espiritualidade é o que nos ancora e nos expande. Sem ela, a tecnologia perde propósito e o corpo perde direção.</p>
+
+      <h3>Você é o seu próprio código-fonte</h3>
+      <p>Estamos em transição: carne, dados, emoção e espírito. O futuro é espiritual e tecnológico, juntos. **Reescreva-se. Reconecte-se.**</p>
+
+      <img src="../img/virtualyogamundo.jpg" alt="Caminho de luzes digitais levando a uma paisagem serena, representando a jornada espiritual com tecnologia." class="article-bottom-img">
+
+      <div class="compartilhar">
+        <span>Compartilhe este artigo:</span>
+        <a href="https://api.whatsapp.com/send?text=Confira%20este%20artigo:%20https://luandesson.github.io/blog-posts/artigo3.html" target="_blank" class="social-icon whatsapp" aria-label="Compartilhar no WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://luandesson.github.io/blog-posts/artigo3.html" target="_blank" class="social-icon facebook" aria-label="Compartilhar no Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/luandesson_alves/" target="_blank" class="social-icon instagram" aria-label="Instagram do Luandesson">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 LUANDESSON | Personal Holistic. Todos os direitos reservados.
+    <p class="footer-msg">“Desperte seu código original.”</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) root.setAttribute("data-theme", savedTheme);
+    const updateIcon = () => {
+      const theme = root.getAttribute("data-theme");
+      toggleButton.textContent = theme === "dark" ? "🌞" : "🌙";
+    };
+    updateIcon();
+    toggleButton.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", current);
+      localStorage.setItem("theme", current);
+      updateIcon();
+    });
+  </script>
+</body>
+</html>
