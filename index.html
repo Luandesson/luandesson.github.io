@@ -17,18 +17,23 @@
   </script>
 </head>
 <body>
-  <header>
-    <img src="img/logo.png" alt="LA Logo" class="logo-img" />
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
-  </header>
+  <header class="header">
+  <img src="img/logo.png" alt="LA Logo" class="logo-img" />
+
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+</header>
+
 
   <section class="hero" id="home">
     <div class="hero-video">
@@ -166,13 +171,6 @@
 
   <section id="contato" data-aos="fade-up">
     <h2>Contato</h2>
-    <form action="#" method="post">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p>Ou conecte-se:</p>
     <p>
       <a href="https://github.com/Luandesson" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/luandesson" target="_blank">LinkedIn</a>
@@ -207,6 +205,14 @@
       localStorage.setItem("theme", current);
       updateIcon();
     });
-  </script>
+    
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>

@@ -803,3 +803,43 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5); /* TRANSLÚCIDO */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* SAFARI */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+.nav-links a {
+  color: #050505;               /* Cor do texto normal */
+  text-decoration: none;     /* Remove sublinhado */
+  font-weight: 900;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #000;    /* Fundo ao passar o mouse */
+  color: #fff;               /* Cor da fonte no hover */
+}
+
