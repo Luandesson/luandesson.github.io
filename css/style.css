@@ -355,7 +355,7 @@ footer {
   #sobre img {
     max-width: 100%;
   }
-}
+
 
 #theme-toggle {
   background: transparent;
@@ -830,7 +830,7 @@ footer {
   }
 }
 .nav-links a {
-  color: #050505;               /* Cor do texto normal */
+  color: var(--text-color);             /* Cor do texto normal */
   text-decoration: none;     /* Remove sublinhado */
   font-weight: 900;
   padding: 8px 16px;
