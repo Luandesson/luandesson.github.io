@@ -457,7 +457,7 @@ footer {
 }
 
 /* Lista de posts na página blog.html */
-.blog-posts-list {
+.alma-list {
     padding: 20px;
     background-color: var(--card-bg-color);
     border-radius: 8px;
@@ -465,7 +465,7 @@ footer {
     margin-top: 20px;
 }
 
-.blog-posts-list h2 {
+.alma-list h2 {
     color: var(--heading-color);
     text-align: center;
     margin-bottom: 40px;
@@ -686,7 +686,7 @@ footer {
         box-shadow: none;
     }
 
-    .blog-posts-list h2, .article-content h2 {
+    .alma-list h2, .article-content h2 {
         font-size: 1.8em;
         margin-bottom: 20px;
     }
