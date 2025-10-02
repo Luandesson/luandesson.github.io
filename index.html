@@ -6,6 +6,8 @@
   <title>LUANDESSON | Personal Holistic</title>
   <meta name="description" content="LUANDESSON | Terapias holísticas, tecnologia consciente e bem-estar integrativo. Transforme sua rotina com corpo, mente e propósito alinhados." />
   <meta name="keywords" content="terapeuta holístico, inteligência artificial, yoga, saúde integrativa, autoconhecimento, física quântica, rotina produtiva, equilíbrio energético" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
@@ -15,6 +17,58 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script>
+  <style>
+    /* Estilos Adicionais para as caixas de projeto (similares aos serviços) */
+    .projetos-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Espaçamento entre os projetos */
+      justify-content: center;
+    }
+
+    .projeto-box-custom {
+      /* Estilo similar ao .servico-box, mas mais largo para projetos */
+      background-color: var(--card-bg-color, #fff); /* Use uma variável de tema se tiver */
+      border: 1px solid var(--border-color, #ccc);
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Por padrão */
+      max-width: 450px; /* Largura máxima para desktop */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .projeto-box-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Adaptação para telas maiores - usando o grid do Bootstrap */
+    @media (min-width: 992px) { /* lg - para duas colunas em telas maiores */
+        .projeto-box-custom {
+            width: calc(50% - 10px); /* 50% menos metade do gap para ficar lado a lado */
+            max-width: none; /* Deixa o Bootstrap controlar a largura */
+        }
+    }
+    
+    .projeto-box-custom h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .projeto-box-custom p {
+        text-align: left;
+        padding: 0 5px;
+        font-size: 0.95em;
+    }
+
+    .carousel-item img {
+        height: 200px; /* Altura fixa para as imagens do carrossel */
+        object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+        border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -50,11 +104,14 @@
   <section id="sobre" data-aos="fade-up">
     <div class="sobre-container">
       <div class="sobre-texto">
-        <h2>Sobre mim</h2>
-        <p>Sou Luandesson Alves, terapeuta holístico e estudante de Alquimia Consciencial, Física Quântica e Engenharia de Software pela 42 Rio. Meu propósito é integrar tecnologia, saúde e bem-estar de forma consciente e transformadora.</p>
+        <h2>Quem Sou Eu:</h2>
+        <p>Sou Luandesson Alves, terapeuta holístico e estudante de Alquimia Consciencial, Física Quântica e Engenharia de Software na 42 Rio. Meu propósito é integrar tecnologia, à saúde e bem-estar de forma consciente e transformadora.</p>
         <p>Acredito no poder de unir mente, corpo e emoções para alcançar equilíbrio, clareza e liberdade interior.</p>
         <p>Com base em práticas integrativas e autoconsciência, ajudo pessoas a superarem estados como ansiedade e depressão, reconectando-as com o momento presente e com sua verdadeira essência.</p>
         <p>Trabalho para que cada pessoa encontre um caminho real de realização, propósito e presença.</p>
+        <p>Fundador da Startup SAPO Web!Web! - Que tem como objetivo, criar Softwares como Soluções (SaaS), Web para micro empreendedores em nuvens.</p>
+        <p>Utilizando linguagem de programação em PYTHON pra automatizar tarefas facilitando processos, economizando tempo gerando lucros e resultados. </p>
+
       </div>
       <div class="sobre-imagem">
         <img src="img/eusou.jpg" alt="Luandesson imagem lateral">
@@ -128,11 +185,11 @@
         <div class="servico-box">
           <img src="img/adm.JPG" alt="Consultoria + Python">
           <figcaption>Introdução à informática</figcaption>
-          <a href="https://wa.me/5521959093765" class="btn-agendar" target="_blank">Agendar</a>
+          <a href="https://wa.me/5521959093765" target="_blank" class="btn-agendar">Agendar</a>
         </div>
         <div class="servico-box">
-          <img src="img/sitecriacao.png" alt="Organização digital">
-          <figcaption>Criação de sites</figcaption>
+          <img src="img/Luandessn TECH.jpg" alt="Organização digital">
+          <figcaption>Criador de Sites & Ladies Pages</figcaption>
           <a href="https://wa.me/5521959093765" class="btn-agendar" target="_blank">Agendar</a>
         </div>
         <div class="servico-box">
@@ -159,29 +216,126 @@
     </div>
   </section>
 
-  <section id="projetos" data-aos="fade-up">
-    <h2>Projetos</h2>
-    <ul>
-      <li>Dashboard de produtividade pessoal</li>
-      <li>Automação de envios de e-mails personalizados</li>
-      <li>Organizadores digitais para metas e hábitos</li>
-      <li>E muito mais!</li>
-    </ul>
-  </section>
+ <section id="projetos" data-aos="fade-up">
+  <h2>Projetos</h2>
+  
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-lg-6 col-md-10">
+        <div class="projeto-box-custom">
+          <h3>🚀 SAPO Web!Web!</h3>
+          
+          <div id="carouselSapo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/logo sapo.png" class="d-block w-100" alt="Imagem 1 SAPO Web!Web! - Interface de Chatbot">
+              </div>
+              <div class="carousel-item">
+                <img src="img/sapo.png" class="d-block w-100" alt="Imagem 2 SAPO Web!Web! - Integração com Agenda">
+              </div>
+              <div class="carousel-item">
+                <img src="img/sapoo.png" class="d-block w-100" alt="Imagem 3 SAPO Web!Web! - Solução SaaS">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSapo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSapo" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+          <p class="mt-3">Minha startup focada em soluções <strong>Web Services (SaaS)</strong> para microempreendedores.  
+          Criamos assistentes virtuais inteligentes, como chatbots integrados ao <strong>Google Agenda, WhatsApp</strong> e <strong>Mercado Pago</strong>, que automatizam agendamentos, mostram serviços e horários disponíveis, e confirmam reservas diretamente na agenda do comércio.</p>
+          <a href="https://github.com/Luandesson" class="btn-agendar mt-2" target="_blank">DEMO do chatbot IA</a>
+        </div>
+      </div>
 
-  <section id="contato" data-aos="fade-up">
-    <h2>Contato</h2>
-    <p>
-      <a href="https://github.com/Luandesson" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/luandesson" target="_blank">LinkedIn</a>
-    </p>
-  </section>
+      <div class="col-lg-6 col-md-10">
+        <div class="projeto-box-custom">
+          <h3>🌿 LUANDESSON | Personal Holistic</h3>
+          
+          <div id="carouselHolistic" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/virtualyogamundo.jpg" class="d-block w-100" alt="Imagem 1 Luandesson Holistic - Meditação">
+              </div>
+              <div class="carousel-item">
+                <img src="img/produtividadeemdia.jpg" class="d-block w-100" alt="Imagem 2 Luandesson Holistic - Yoga">
+              </div>
+              <div class="carousel-item">
+                <img src="img/meditaçãoguiada.jpg" class="d-block w-100" alt="Imagem 3 Luandesson Holistic - Atendimento">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHolistic" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHolistic" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+          <p class="mt-3">Projeto de terapias personalizadas, integrando corpo, mente e emoções.  
+          Utilizo práticas integrativas, mindfulness e técnicas de autoconsciência para aumentar produtividade, saúde e bem-estar.
+          Incluindo as categorias: Práticas Integrativas, Atendimentos Personalizados e Personal Business Services.</p>
+          <a href="#servicos" class="btn-agendar mt-2">Entre em contato agora mesmo e saiba mais</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center mt-5">
+  <div class="col-12 col-md-8">
+    <div class="tech-lab-container">
+      
+      <h3>✨ Lab Tech & Inovação</h3>
+      
+      <p class="tech-item">
+        **Dashboard de Produtividade** (IA-Assisted Workflow)
+      </p>
+      <p class="tech-item">
+        **Automação de Comunicação** (E-mails e Mensagens Personalizadas)
+      </p>
+      <p class="tech-item">
+        **Organizadores Digitais** (Gestão de Metas e Hábitos Conscientes)
+      </p>
+      
+      <a href="#contato" class="btn-agendar mt-4">
+        Consultoria Tech
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+  <section id="contato" data-aos="fade-up" class="py-5">
+    <h2>Conecte-se</h2>
+
+    <div style="margin-bottom: 30px;">
+        <a href="https://github.com/Luandesson" target="_blank" class="btn-social-ghost">
+            🔗 GitHub
+        </a> 
+        <a href="https://www.linkedin.com/in/luandesson" target="_blank" class="btn-social-ghost">
+            👔 LinkedIn
+        </a>
+    </div>
+
+    <div style="font-size: 1.1em; margin-top: 20px;">
+        Para agendamentos ou serviços, use o WhatsApp: 
+    </div>
+    <a href="https://wa.me/5521959093765" class="btn-agendar" target="_blank" style="margin-top: 15px; display: inline-block;">
+        Fale Comigo Agora
+    </a>
+</section>
 
   <footer>
     &copy; 2025 LUANDESSON | Personal Holistic. Todos os direitos reservados.
     <p class="footer-msg">“Desperte seu código original.”</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -213,6 +367,34 @@
     navLinks.classList.toggle("active");
   });
 </script>
+<style>
+/* ... Seus estilos existentes (.projetos-container, .projeto-box-custom, etc.) ... */
 
+    /* NOVO ESTILO: BOTÃO SOCIAL GHOST */
+    .btn-social-ghost {
+        display: inline-block;
+        padding: 8px 15px;
+        margin: 5px; /* Espaçamento entre os botões */
+        border: 2px solid #589ffc; /* Cor de borda azul similar ao "Fale Comigo Agora" */
+        color: #1e1e1e; /* Cor do texto escuro (adapte para tema claro/escuro) */
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px; /* Bordas levemente arredondadas */
+        transition: all 0.2s ease-in-out;
+    }
+
+    .btn-social-ghost:hover {
+        background-color: #589ffc; /* Preenche a cor no hover */
+        color: white; /* Texto branco no hover */
+        transform: translateY(-2px); /* Efeito sutil de elevação */
+    }
+
+    /* Estilo para a quebra central entre os links, se mantiver o "|" */
+    .separator-social {
+        color: #ccc;
+        margin: 0 10px;
+        font-weight: normal;
+    }
+</style>
 </body>
 </html>
