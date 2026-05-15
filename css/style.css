@@ -876,3 +876,10 @@ footer {
 .btn-projeto:hover {
   background: #b71c1c;
 }
+.btn-tech{
+  background:#0d6efd;
+  color:white!important;
+  padding:8px 14px;
+  border-radius:6px;
+  font-weight:600;
+}

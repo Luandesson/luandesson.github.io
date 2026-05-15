@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO OTIMIZADO PARA ESCALA NACIONAL -->
+    <title>Criação de Sites Profissionais para Todo o Brasil | Luandessn TECH</title>
+    <meta name="description" content="Criação de sites profissionais, landing pages e Google Ads para empresas em todo o Brasil. Colocamos seu negócio no topo do Google.">
+    <meta name="keywords" content="Criação de sites, Google Ads Brasil, Landing Page profissional, Marketing Digital para empresas">
+    <meta name="author" content="Luandessn TECH">
+
+    <!-- Bootstrap & Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- AOS Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff7a18;
+            --secondary: #ff0058;
+            --dark-bg: #0b0b0b;
+            --card-bg: #161616;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR FIXA PREMIUM */
+        .navbar {
+            background: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+            padding: 15px 0;
+        }
+
+        .section { padding: 100px 0; }
+        h1, h2, h3 { font-weight: 700; }
+        p { color: var(--text-gray); font-size: 1.1rem; line-height: 1.6; }
+
+        /* HERO SECTION COM EFEITO */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("img/Luandessn TECH.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); line-height: 1.1; }
+
+        /* BOTÃO 3D COM PULSO */
+        .btn-3d {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            padding: 18px 35px;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(255, 0, 88, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 6px 20px rgba(255, 0, 88, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 10px 30px rgba(255, 0, 88, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 6px 20px rgba(255, 0, 88, 0.4); }
+        }
+
+        .btn-3d:hover {
+            animation: none;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 0, 88, 0.6);
+            color: white;
+        }
+
+        /* CARDS ESTILO TECH */
+        .card-service {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            padding: 40px;
+            border-radius: 24px;
+            height: 100%;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card-service:hover {
+            border-color: var(--primary);
+            background: #1e1e1e;
+            transform: translateY(-12px);
+        }
+
+        .card-service i, .card-service h3 {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-service i { font-size: 3rem; margin-bottom: 20px; display: block; }
+
+        /* PORTFÓLIO */
+        .portfolio-card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .portfolio-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+        .btn-portfolio {
+            background: #c33112;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-portfolio:hover { background: #e63e1a; color: white; box-shadow: 0 5px 15px rgba(195, 49, 18, 0.4); }
+
+        /* WHATSAPP FLUTUANTE */
+        .wp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+        .wp-float:hover { transform: scale(1.1) rotate(10deg); color: white; }
+
+        .badge-tech {
+            font-size: 0.9rem;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #333;
+            color: #ddd;
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        .badge-tech:hover {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* FAQ ACCORDION CUSTOM */
+        .accordion-item { background: var(--card-bg); border: 1px solid #222; margin-bottom: 10px; border-radius: 15px !important; overflow: hidden; }
+        .accordion-button { background: var(--card-bg); color: white; font-weight: 600; }
+        .accordion-button:not(.collapsed) { background: #1e1e1e; color: var(--primary); box-shadow: none; }
+        .accordion-button::after { filter: invert(1); }
+        .accordion-body { color: var(--text-gray); }
+
+        footer .footer-link i { transition: 0.3s; color: white; }
+        footer .footer-link:hover i { transform: translateY(-5px); color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">LUANDESSN <span class="text-gradient">TECH</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#processo">Como Funciona</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-3" href="https://wa.me/5521959093765">Orçamento Grátis</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/5521959093765" class="wp-float" target="_blank" rel="noopener">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="zoom-in">
+                <h1 class="mb-4">Seu negócio no <span class="text-gradient">Topo do Google</span> todos os dias</h1>
+                <p class="mb-5 text-white lead">Sites Profissionais • Google Maps • Gestão de Anúncios para Empresas em **Todo o Brasil**</p>
+                <a href="https://wa.me/5521959093765" class="btn-3d">Quero atrair novos clientes <i class="bi bi-fire"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- BENEFÍCIOS -->
+<section class="section">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="mb-4 display-5">Por que sua empresa precisa de um <span class="text-gradient">site profissional</span>?</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <p>O site é sua vitrine 24h para clientes de **qualquer cidade do Brasil**. Ele transmite confiança e transforma buscas no Google em vendas reais. Não deixe sua concorrência dominar o mercado digital enquanto você fica de fora.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="section bg-black">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5" data-aos="fade-up">Soluções para o seu Crescimento Nacional</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-service text-center">
+                    <i class="bi bi-globe"></i>
+                    <h3>Site Profissional</h3>
+                    <p>Landing pages de alta performance otimizadas para converter visitantes em orçamentos reais.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-service text-center">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Google Maps</h3>
+                    <p>Posicionamos sua empresa no mapa para que clientes locais encontrem você com facilidade.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-service text-center">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h3>Tráfego Pago</h3>
+                    <p>Anúncios no Google e Meta focados no seu público-alvo, em qualquer estado do país.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio" class="section">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5" data-aos="fade-up">Projetos de Sucesso</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="portfolio-card">
+                    <img src="https://via.placeholder.com/600x400/161616/white?text=Prime+Cleaning" class="w-100" alt="Site Prime Cleaning">
+                    <div class="p-4">
+                        <h4 class="text-white">Prime Cleaning NC</h4>
+                        <p class="small mb-4">Site Moderno de Serviços de Limpeza</p>
+                        <a href="https://primeecleaningnc.com/" target="_blank" class="btn-portfolio"><i class="bi bi-arrow-up-right"></i> VER PROJETO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-card">
+                    <img src="https://via.placeholder.com/600x400/161616/white?text=GD+Inforcell" class="w-100" alt="Site GD Inforcell">
+                    <div class="p-4">
+                        <h4 class="text-white">GD Inforcell</h4>
+                        <p class="small mb-4">Plataforma de E-commerce Elegante</p>
+                        <a href="https://gdinforcell.com/" target="_blank" class="btn-portfolio"><i class="bi bi-arrow-up-right"></i> VER PROJETO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-card">
+                    <img src="https://via.placeholder.com/600x400/161616/white?text=Floripes+Wood" class="w-100" alt="Site Floripes Wood">
+                    <div class="p-4">
+                        <h4 class="text-white">Floripes Wood</h4>
+                        <p class="small mb-4">Design Rústico e Sofisticado</p>
+                        <a href="https://www.floripeswooddesign.com/" target="_blank" class="btn-portfolio"><i class="bi bi-arrow-up-right"></i> VER PROJETO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="section bg-black">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Resultados que Geram Clientes</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card-service">
+                    <h3 class="display-4 fw-bold">+300%</h3>
+                    <p>Aumento médio de contatos após lançamento do site.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-service">
+                    <h3 class="display-4 fw-bold">Página 1</h3>
+                    <p>Clientes posicionados rapidamente no Google.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-service">
+                    <h3 class="display-4 fw-bold">24h</h3>
+                    <p>Seu site trabalhando todos os dias captando orçamentos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo" class="section">
+    <div class="container text-center">
+        <h2 class="mb-5 display-5" data-aos="fade-up">Como funciona o nosso <span class="text-gradient">Processo</span></h2>
+        <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-service">
+                    <h4>1️⃣ Briefing</h4>
+                    <p class="small">Entendemos seu negócio e seus clientes ideais.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-service">
+                    <h4>2️⃣ Criação</h4>
+                    <p class="small">Design moderno focado totalmente em conversão.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-service">
+                    <h4>3️⃣ Publicação</h4>
+                    <p class="small">Seu site no ar rápido, seguro e otimizado.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-service">
+                    <h4>4️⃣ Escala</h4>
+                    <p class="small">Google Ads trazendo clientes qualificados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEGMENTOS MAIS BUSCADOS -->
+<section class="section bg-black">
+    <div class="container text-center">
+        <h2 class="mb-4" data-aos="fade-up">Especialista em <span class="text-gradient">Diversos Segmentos</span></h2>
+        <p class="mb-5" data-aos="fade-up">Soluções validadas para os nichos que mais vendem no Google em todo o Brasil.</p>
+        
+        <div class="d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up">
+            <!-- ESTÉTICA & BELEZA -->
+            <span class="badge-tech">Nail Designer</span>
+            <span class="badge-tech">Lash Designer</span>
+            <span class="badge-tech">Barbearias</span>
+            <span class="badge-tech">Salões de Beleza</span>
+            <span class="badge-tech">Clínicas de Estética</span>
+            
+            <!-- PROFISSIONAIS LIBERAIS -->
+            <span class="badge-tech">Advogados</span>
+            <span class="badge-tech">Contadores</span>
+            <span class="badge-tech">Arquitetos</span>
+            <span class="badge-tech">Engenheiros</span>
+            <span class="badge-tech">Psicólogos</span>
+
+            <!-- SAÚDE -->
+            <span class="badge-tech">Dentistas</span>
+            <span class="badge-tech">Médicos</span>
+            <span class="badge-tech">Nutricionistas</span>
+            <span class="badge-tech">Fisioterapeutas</span>
+
+            <!-- SERVIÇOS & MANUTENÇÃO -->
+            <span class="badge-tech">Mecânicos / Oficinas</span>
+            <span class="badge-tech">Ar Condicionado</span>
+            <span class="badge-tech">Eletricistas</span>
+            <span class="badge-tech">Serralherias</span>
+            <span class="badge-tech">Marcenarias</span>
+
+            <!-- NEGÓCIOS LOCAIS -->
+            <span class="badge-tech">Imobiliárias</span>
+            <span class="badge-tech">Restaurantes</span>
+            <span class="badge-tech">Pet Shops</span>
+            <span class="badge-tech">Autoescolas</span>
+            <span class="badge-tech">Energia Solar</span>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5" data-aos="fade-up">Perguntas Frequentes</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8" data-aos="fade-up">
+                <div class="accordion" id="faq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                                Quanto custa um site profissional?
+                            </button>
+                        </h2>
+                        <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                            <div class="accordion-body">O valor varia conforme a complexidade. Criamos soluções sob medida que cabem no orçamento de empresas que buscam retorno real.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                                Em quanto tempo fica pronto?
+                            </button>
+                        </h2>
+                        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                            <div class="accordion-body">Normalmente entre 7 a 15 dias úteis após o envio de todas as informações do briefing.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">
+                                Vocês atendem a minha cidade?
+                            </button>
+                        </h2>
+                        <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                            <div class="accordion-body">Sim! Atendemos empresas em todo o território nacional através de consultorias online e reuniões remotas.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- PLANOS E PREÇOS -->
+<section id="planos" class="section bg-black">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5" data-aos="fade-up">Investimento <span class="text-gradient">Inteligente</span></h2>
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Plano Essencial -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-service text-center h-100">
+                    <h4 class="text-white">Essencial</h4>
+                    <div class="py-3">
+                        <span class="display-5 fw-bold text-white">R$ 600</span>
+                        <p class="small">Pagamento Único</p>
+                    </div>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Landing Page Profissional</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Otimizado para Celular</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Botão de WhatsApp</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Integração com Redes Sociais</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Entrega em até 7 dias</li>
+                    </ul>
+                    <a href="https://wa.me/5521959093765" class="btn btn-outline-light w-100 py-3">Escolher Plano</a>
+                </div>
+            </div>
+
+            <!-- Plano Business (Destaque) -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-service text-center h-100 border-primary" style="position: relative; transform: scale(1.05); background: #1e1e1e;">
+                    <span class="badge bg-primary position-absolute top-0 start-50 translate-middle">MAIS VENDIDO</span>
+                    <h4 class="text-white mt-2">Business + Ads</h4>
+                    <div class="py-3">
+                        <span class="display-5 fw-bold text-white">R$ 850</span>
+                        <p class="small">Pagamento Único</p>
+                    </div>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Tudo do Plano Essencial</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Configuração de Google Ads</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Google Meu Negócio (Maps)</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> SEO Básico de Rankeamento</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Suporte por 30 dias</li>
+                    </ul>
+                    <a href="https://wa.me/5521959093765" class="btn btn-primary w-100 py-3">Começar Agora</a>
+                </div>
+            </div>
+
+            <!-- Plano Custom -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-service text-center h-100">
+                    <h4 class="text-white">E-commerce / Personalizado</h4>
+                    <div class="py-3">
+                        <span class="h4 fw-bold text-white">Sob Consulta</span>
+                        <p class="small">Projetos Complexos</p>
+                    </div>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Loja Virtual Completa</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Sistemas de Pagamento</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Gestão de Estoque</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Painel Administrativo</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Funcionalidades Exclusivas</li>
+                    </ul>
+                    <a href="https://wa.me/5521959093765" class="btn btn-outline-light w-100 py-3">Falar com Especialista</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- CTA FINAL -->
+<section class="section bg-black text-center">
+    <div class="container" data-aos="zoom-in">
+        <h2 class="mb-4 display-5">Seu concorrente já está no <span class="text-gradient">Google</span></h2>
+        <p class="mb-5">A pergunta é: quando sua empresa vai aparecer também?</p>
+        <a href="https://wa.me/5521959093765" class="btn-3d">Quero meu site agora <i class="bi bi-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-5 text-center border-top border-dark">
+    <div class="container">
+        <h4 class="fw-bold mb-3">LUANDESSN <span class="text-gradient">TECH</span></h4>
+        <p class="small text-secondary mb-4">Criação de Sites • Google Ads • Marketing Digital</p>
+        <div class="d-flex justify-content-center gap-4 mb-4">
+            <a href="https://wa.me/5521959093765" class="footer-link"><i class="bi bi-whatsapp fs-3"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-instagram fs-3"></i></a>
+            <a href="#" class="footer-link"><i class="bi bi-linkedin fs-3"></i></a>
+        </div>
+        <p class="text-secondary" style="font-size: 0.8rem;">© 2026 Luandessn TECH - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
